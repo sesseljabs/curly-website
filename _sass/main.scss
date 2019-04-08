@@ -1,10 +1,13 @@
 /*---------------------------
         all
 -----------------------------*/
-
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: #F4FEC1;
     margin: 0;
+    height: 100%;
 }
 
 /*-------------------------
@@ -15,6 +18,7 @@ header {
     background-color: #81726A;
     width: 100%;
     text-align: center;
+    a{text-decoration: none;}
     h1 {
         color: #D9F9A5;
         margin: 0;
@@ -51,7 +55,7 @@ header {
 
 .container {
     width: 100%;
-    
+    height: 100%;
     .left {
         background-color: #D2D68D;
         ul {
@@ -75,16 +79,13 @@ header {
             padding: 1em;
         }
     }
-    .menuInput, .icon-menu {
+    .menuInput {
         position: absolute;
         display: none;
         top: -999em;
         left: -999em;
     }
 
-    .icon-menu::before {
-        content: '\00a9';
-    }
 
     // body
     .container {
@@ -99,6 +100,10 @@ header {
             margin-left: auto;
             margin-right: auto;
             }
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            top: 153.6px;
         }
 
         .right {
@@ -115,6 +120,13 @@ header {
 @media screen and (max-width: 800px) {
     // header
 
+    .menuLabel {
+        .icon-menu::before {
+            content: '\00a9';
+            font-size: 23px;
+        }
+    }
+
     // body
 
     .container {
@@ -123,12 +135,12 @@ header {
 
         .left {
             .sidebar {
-            display: flex;
-            flex-flow: row;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 1em;
-        }
+                display: flex;
+                flex-flow: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin: 1em;
+            }
         }
 
         .right {
