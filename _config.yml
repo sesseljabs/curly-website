@@ -4,11 +4,11 @@ url: "https://sesseljabs.github.io/curly-website/"
 
 defaults:
   - scope:
-      path: "/"
+      path: "/curly-website/"
       type: "posts"
     values:
       layout: "post"
   - scope:
-      path: "/"
+      path: "/curly-website/"
     values:
       layout: "default"
