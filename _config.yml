@@ -1,0 +1,14 @@
+title: myblog
+baseurl: ""
+url: "https://sesseljabs.github.io/curly-website/"
+
+defaults:
+  - scope:
+      path: "/"
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "/"
+    values:
+      layout: "default"
