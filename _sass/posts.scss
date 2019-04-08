@@ -1,0 +1,23 @@
+.posts {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    a {
+        text-decoration: none;
+        color: #68534D;
+        font-weight: 900;
+    }
+    a:visited {
+        color: #551A8B;
+    }
+    a:hover, a:active {
+        color: #81726A;
+    }
+    .postrow {
+        margin: 0 12px;
+        ul {
+            list-style: none;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+---
+layout: default
+title: Form uwu
+---
+
+<script>
+    function myFunction() {
+        window.alert("uwu bean");
+        for(var i = 1; i < 100; i++){
+            window.alert("hewwo")
+        }
+}
+</script>
+
+<form class="umsokn" onsubmit="myFunction()">
+        <fieldset id="field">
+            <legend>Pöntun</legend>
+            <label for="nafn">Nafn<br>
+                <input type="text" name="nafn" placeholder="Nafn" required>
+            </label>
+    
+            <label for="netfang">Netfang<br>
+                <input type="email" name="netfang" placeholder="Netfang" required>
+            </label>
+    
+            <label for="dag">Hvaða dag viltu fá þetta?
+                <input type="date" name="dag">
+            </label>
+    
+            <label for="tegund">Veldu aukaatriði<br>
+                <input type="checkbox" name="tegund"> Mjúkur 
+                <input type="checkbox" name="tegund"> Breiður 
+                <input type="checkbox" name="tegund"> Swirly
+                <input type="checkbox" name="tegund"> Fade
+            </label>
+    
+            <label for="choice">Veldu tegund<br>
+                <select name="choice">
+                    <option>Hestur</option>
+                    <option>Hundur</option>
+                    <option>Kolkrabbi</option>
+                    <option>Demogorgon</option>
+                </select>
+            </label>
+            <label>Hvaða stærð viltu?<br>
+                <input type="radio" name="val" required> Mini 4"
+                <input type="radio" name="val"> Lítill 6"
+                <input type="radio" name="val"> Miðlungs 8"
+                <input type="radio" name="val"> Stór 10"
+                <input type="radio" name="val"> Risa 12"
+            </label>
+    
+            <label>Athugasemd<br>
+                <textarea></textarea>
+            </label>
+            <label for="submit">
+                <input type="submit" name="submit" value="Senda" id="send">
+            </label>
+        </fieldset>
+    </form>

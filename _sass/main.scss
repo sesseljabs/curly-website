@@ -1,0 +1,141 @@
+/*---------------------------
+        all
+-----------------------------*/
+
+body {
+    background-color: #F4FEC1;
+    margin: 0;
+}
+
+/*-------------------------
+           header
+---------------------------*/
+
+header {
+    background-color: #81726A;
+    width: 100%;
+    text-align: center;
+    h1 {
+        color: #D9F9A5;
+        margin: 0;
+        padding: .6em;
+        font-size: 3em;
+    }
+
+    // Navigation bar
+
+    .navigation {
+        color: #D9F9A5;
+        padding: .6em;
+        a, a:visited {
+            color: #D9F9A5;
+            font-size: 1.2em;
+            text-decoration: none;
+            margin: 100px 0 0 0;
+        }
+        a:hover, a:active {
+            color: #93cc39;
+        }
+        .current {
+            color: #93cc39 !important;
+        }
+        .current:hover {
+            color: rgb(133, 177, 63) !important;
+        }
+    }
+}
+
+/*----------------------------
+        BODY
+------------------------------*/
+
+.container {
+    width: 100%;
+    
+    .left {
+        background-color: #D2D68D;
+        ul {
+            padding: 0 10px;
+        }
+    }
+}
+
+
+/*---------------
+    Flexible
+-----------------*/
+
+// í stórum skjám
+
+@media screen and (min-width: 800px) {
+    // header
+
+    .navigation {
+        a {
+            padding: 1em;
+        }
+    }
+    .menuInput, .icon-menu {
+        position: absolute;
+        display: none;
+        top: -999em;
+        left: -999em;
+    }
+
+    .icon-menu::before {
+        content: '\00a9';
+    }
+
+    // body
+    .container {
+        display: flex;
+        flex-flow: row;
+
+
+        .left {
+            width: 13%;
+            .sidebar {
+            width: 67%;
+            margin-left: auto;
+            margin-right: auto;
+            }
+        }
+
+        .right {
+            width: 65%;
+            margin-left: auto;
+            margin-right: 15%;
+        }
+    }
+
+    // footer
+}
+
+// í litlum skjám
+@media screen and (max-width: 800px) {
+    // header
+
+    // body
+
+    .container {
+        display: flex;
+        flex-flow: column-reverse;
+
+        .left {
+            .sidebar {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 1em;
+        }
+        }
+
+        .right {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    // footer
+}

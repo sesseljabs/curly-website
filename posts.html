@@ -1,0 +1,19 @@
+---
+layout: default
+title: UwU
+---
+<h1>All posts</h1>
+<div class="posts">
+{% for post in site.posts %}
+        {% assign currentdate = post.date | date: "%Y" %}
+            {% if currentdate != date %}
+                {% unless forloop.first %}</ul></div>{% endunless %}
+                <div class="postrow">
+                    <h2 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
+                    <ul>
+                {% assign date = currentdate %}
+            {% endif %}
+            <li><a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: "%d %b, %y" }}</a></li>
+            {% if forloop.last %}</ul></div>{% endif %}
+{% endfor %}
+</div>

@@ -1,0 +1,103 @@
+/*---------------------------
+        all
+-----------------------------*/
+body {
+  background-color: #F4FEC1;
+  margin: 0; }
+
+/*-------------------------
+           header
+---------------------------*/
+header {
+  background-color: #81726A;
+  width: 100%;
+  text-align: center; }
+  header h1 {
+    color: #D9F9A5;
+    margin: 0;
+    padding: .6em;
+    font-size: 3em; }
+  header .navigation {
+    color: #D9F9A5;
+    padding: .6em; }
+    header .navigation a, header .navigation a:visited {
+      color: #D9F9A5;
+      font-size: 1.2em;
+      text-decoration: none;
+      margin: 100px 0 0 0; }
+    header .navigation a:hover, header .navigation a:active {
+      color: #93cc39; }
+    header .navigation .current {
+      color: #93cc39 !important; }
+    header .navigation .current:hover {
+      color: #85b13f !important; }
+
+/*----------------------------
+        BODY
+------------------------------*/
+.container {
+  width: 100%; }
+  .container .left {
+    background-color: #D2D68D; }
+    .container .left ul {
+      padding: 0 10px; }
+
+/*---------------
+    Flexible
+-----------------*/
+@media screen and (min-width: 800px) {
+  .navigation a {
+    padding: 1em; }
+
+  .menuInput, .icon-menu {
+    position: absolute;
+    display: none;
+    top: -999em;
+    left: -999em; }
+
+  .icon-menu::before {
+    content: '\00a9'; }
+
+  .container {
+    display: flex;
+    flex-flow: row; }
+    .container .left {
+      width: 13%; }
+      .container .left .sidebar {
+        width: 67%;
+        margin-left: auto;
+        margin-right: auto; }
+    .container .right {
+      width: 65%;
+      margin-left: auto;
+      margin-right: 15%; } }
+@media screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-flow: column-reverse; }
+    .container .left .sidebar {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 1em; }
+    .container .right {
+      width: 90%;
+      margin: 0 auto; } }
+.posts {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .posts a {
+    text-decoration: none;
+    color: #68534D;
+    font-weight: 900; }
+  .posts a:visited {
+    color: #551A8B; }
+  .posts a:hover, .posts a:active {
+    color: #81726A; }
+  .posts .postrow {
+    margin: 0 12px; }
+    .posts .postrow ul {
+      list-style: none; }
